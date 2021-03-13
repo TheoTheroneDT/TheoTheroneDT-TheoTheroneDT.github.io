@@ -1,4 +1,30 @@
-- name: Home
-  link: /
-- name: About
-  link: /about.html
+# main links
+main:
+  - title: Recents
+    url: /
+  - title: "Categories"
+    url: /categories/
+  - title: "Tags"
+    url: /Tags/
+  - title: "Archives"
+    url: /year-archive/
+  
+  
+  
+  #- title: "About"
+  #  url: /about/
+
+  # - title: "About"
+  #   url: /about/
+  # - title: "Sample Posts"
+  #   url: /year-archive/
+  # - title: "Sample Collections"
+  #   url: /collection-archive/
+  # - title: "Sitemap"
+  #   url: /sitemap/
+ 
+  # - title: "Archive"는 연도별 포스트 용 https://honbabzone.com/jekyll/start-gitHubBlog/
+  # 카테고리 참조 https://ohjinjin.github.io/categories/
+
+  #/catecories/: permalink라고 한다. permalink에 쓰여진 url로 요청이 들어오면 _layout에 존재하는 {파일명}.html을 불러와 삽입한다. --- --- 사이에 layout: 어쩌고 써있는 그 어쩌고가 _layout 폴더에 있는 파일인 것.
+  #_pages는 위 내용을 한번에 모아 놓은 걸로 이해했음.
