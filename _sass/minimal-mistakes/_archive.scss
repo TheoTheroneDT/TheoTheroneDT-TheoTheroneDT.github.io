@@ -45,11 +45,16 @@
 
 .archive__item-title {
   margin-bottom: 0.25em;
-  font-family: $sans-serif-narrow;
+  font-family: $serif; /*원래는 sans-serif-narrow;*/
+  a{
+    color: #003458;
+    text-decoration: none;
+    }						/* 링크 관련 설정은 a 태그 안에서! */
+ 
   line-height: initial;
   overflow: hidden;
   text-overflow: ellipsis;
-
+  
   a[rel="permalink"]::before {
     content: '';
     position: absolute;
