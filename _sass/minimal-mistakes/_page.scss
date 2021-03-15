@@ -392,15 +392,19 @@ body {
   }
 }
 
+
 .back-to-top {
   display: block;
   clear: both;
   color: $muted-text-color;
-  font-size: 0.6em;
+  font-size: 0.8em;
   text-transform: uppercase;
   text-align: right;
+  font-family: $my-cursive;
+  font-weight: bold;
   text-decoration: none;
 }
+
 
 /*
    Comments
