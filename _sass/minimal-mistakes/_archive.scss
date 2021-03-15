@@ -24,6 +24,7 @@
   a {
     position: relative;
     z-index: 10;
+	font-size: $type-size-5;
   }
 
   a[rel="permalink"] {
@@ -49,6 +50,7 @@
   a{
     color: #003458;
     text-decoration: none;
+	font-size: $type-size-5;
     }						/* 링크 관련 설정은 a 태그 안에서! */
  
   line-height: initial;
@@ -80,7 +82,7 @@
 .archive__item-excerpt {
   margin-top: 0;
   font-size: $type-size-6;
-
+  font-family: $my-subtitle; /* 변수는 _variables.scss에서 설정 */
   & + p {
     text-indent: 0;
   }
@@ -132,9 +134,9 @@
 .list__item {
   .page__meta {
     margin: 0 0 4px;
-    font-size: 0.6em;
+    font-size: 0.78em;   
   }
-}
+}   /*date . miniutes read 부분 */ 
 
 /*
    Grid view
