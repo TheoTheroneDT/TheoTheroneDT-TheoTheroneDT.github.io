@@ -90,7 +90,7 @@
 		//	D - comment, the text left in the comment field
 		//	E - isAuthor, boolean indicating if the comment was left by the actual author
 		var sqlStatement = encodeURIComponent(`SELECT A, C, D, E WHERE B = '${thisPageUrl}'`)
-		fetch(`https://docs.google.com/spreadsheets/d/e/2PACX-1vT2QGOVRje1xO_JcUt5pr0DUhnv7I-G-08q6BrNSyaf_OUqrMjZAO6W-F1GkYfiWvfDnxyXQyBAzrVV/pub?output=csv`)
+		fetch(`{{ site.comment-read }}/gviz/tq?tqx=out:csv&sheet=comments&tq=${sqlStatement}&headers=0`)
 		.then(response => response.text())
 		.then(response => displayComments(response))
 	}

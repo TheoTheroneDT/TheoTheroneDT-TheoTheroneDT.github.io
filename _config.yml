@@ -29,8 +29,8 @@ logo                     : # path of logo image to display in the masthead, e.g.
 masthead_title           : "D.T.😉" # overrides the website title displayed in the masthead, use " " for no title
 breadcrumbs              : false # true, false (default)
 words_per_minute         : 200
-comment-post: https://docs.google.com/forms/d/e/1FAIpQLSeHaFZSLKDcOUpyEmVcP9Nj1QrWLJQOW8JFtLIcghyVxZRwIA
-comment-read: https://docs.google.com/spreadsheets/d/1H4whJt4Iaz1VRZRRxGz3HQruPtb2G9NGOBW5WR5CYU0
+comment-post: "https://docs.google.com/forms/d/e/1FAIpQLSeHaFZSLKDcOUpyEmVcP9Nj1QrWLJQOW8JFtLIcghyVxZRwIA"
+comment-read: "https://docs.google.com/spreadsheets/d/1H4whJt4Iaz1VRZRRxGz3HQruPtb2G9NGOBW5WR5CYU0"
 coment-post-fields: [ entry.1348434360, entry.1341424562, entry.910574530 ]
 comments:
   provider               : # false (default), "disqus", "discourse", "facebook", "staticman", "staticman_v2", "utterances", "custom"
