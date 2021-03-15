@@ -483,7 +483,7 @@
 .nav__title {
   margin: 0;
   padding: 0.5rem 0.75rem;
-  font-family: $sans-serif-narrow;
+  font-family: $serif;      /* toc 제목 : Onthispage */
   font-size: $type-size-5;
   font-weight: bold;
 }
@@ -492,7 +492,7 @@
   display: block;
   margin: 0.5rem 0;
   padding: 0.25rem 0;
-  font-family: $sans-serif-narrow;
+  font-family: $serif;
   font-size: $type-size-6;
   font-weight: bold;
   text-transform: uppercase;
@@ -504,7 +504,7 @@
      ========================================================================== */
 
 .toc {
-  font-family: $sans-serif-narrow;
+  font-family: $serif;                            /* toc 목차 : Onthispage */
   color: $gray;
   background-color: $background-color;
   border: 1px solid $border-color;
@@ -551,8 +551,8 @@
   }
 
   li ul > li a {
-    padding-left: 1.25rem;
-    font-weight: normal;
+    padding-left: 1.35rem;           /* 원래 padding-left: 1.25rem; */
+    font-weight: bold;             /* toc 목차 들여쓰기 부분 */
   }
 
   li ul li ul > li a {
