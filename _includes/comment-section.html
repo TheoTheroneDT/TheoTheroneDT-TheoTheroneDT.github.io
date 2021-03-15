@@ -78,19 +78,19 @@
 		});
 	}
 
-	//Calls to the Google Sheets gviz API to load the comment data
+	<!--//Calls to the Google Sheets gviz API to load the comment data
 	//Since we are storing comments for all of our blog articles in one sheet, we filter
-	//by page URL.
+	//by page URL.-->
 	function reloadComments() {
-		//Use SQL in the gviz URL to load the correct csv.
+		<!--//Use SQL in the gviz URL to load the correct csv.
 		//In this implementation, columns are mapped to the following:
 		//	A - timestamp, the time the comment was left
 		//	B - page url, the page the comment was left on
 		//	C - name, the text left in the comment name field
 		//	D - comment, the text left in the comment field
-		//	E - isAuthor, boolean indicating if the comment was left by the actual author
+		//	E - isAuthor, boolean indicating if the comment was left by the actual author-->
 		var sqlStatement = encodeURIComponent(`SELECT A, C, D, E WHERE B = '${thisPageUrl}'`)
-		fetch(`{{ site.comment-read }}/gviz/tq?tqx=out:csv&sheet=comments&tq=${sqlStatement}&headers=0`)
+		fetch(`https://docs.google.com/spreadsheets/d/1H4whJt4Iaz1VRZRRxGz3HQruPtb2G9NGOBW5WR5CYU0/gviz/tq?tqx=out:csv&sheet=comments&tq=${sqlStatement}&headers=0`)
 		.then(response => response.text())
 		.then(response => displayComments(response))
 	}
@@ -110,16 +110,16 @@
 		var username = $("#comment-name").val()
 		var comment = $("#comment-comment").val()
 
-		fetch(`{{ site.comment-post }}/formResponse`, {
+		fetch(`https://docs.google.com/forms/d/e/1FAIpQLSeHaFZSLKDcOUpyEmVcP9Nj1QrWLJQOW8JFtLIcghyVxZRwIA/formResponse`, {
 		  method: 'POST',
 		  mode: 'no-cors',
 		  headers: {
 		    "Content-Type": "application/x-www-form-urlencoded"
 		  },
 		  body: encodeFormData({
-		  	"{{ site.comment-post-fields[0] }}" : thisPageUrl,
-		  	"{{ site.comment-post-fields[1] }}" : username,
-		  	"{{ site.comment-post-fields[2] }}" : comment
+		  	"entry.1348434360" : thisPageUrl,
+		  	"entry.1341424562" : username,
+		  	"entry.910574530" : comment
 		  })
 		}).then(response => {
 			$("#comment-name").val('')
