@@ -4,6 +4,12 @@ permalink: /fragments/
 title: "Fragments of Time"
 author_profile: true
 ---
+{% if site.search == true %}
+      <div class="search-content">
+        {% include_cached search/search_form.html %}
+      </div>
+    {% endif %}
+	
 <script src="https://utteranc.es/client.js"
         repo="TheoTheroneDT/Fragments"
         issue-term="url"
@@ -24,3 +30,16 @@ author_profile: true
 : "photon-dark"
 : "boxy-light"
 -->
+
+
+<!-- js 파일 override 예시! -->
+<style>
+ .utterances {
+     max-width: 100% !important;
+}
+ .utterances-frame {
+	color-scheme: light !important;
+}
+	
+</style>
+
