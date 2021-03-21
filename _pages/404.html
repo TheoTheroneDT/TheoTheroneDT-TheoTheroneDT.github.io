@@ -1,0 +1,43 @@
+---
+layout: 404
+author_profile: true
+permalink: /404/
+---
+<h1><strong>😱 Oops!</strong></h1>
+<h2>This page doesn't exist.</h2>
+This is a 404 error, which means you've clicked on a bad link or entered an invalid URL.</br>
+</br>
+
+<a href= "/" style="text-decoration: none; background-color: #F6EB6E
+; color: #0f477e">GO HOME&nbsp;</a> or <span style="background-color: #C9ECFC">SEARCH</span> here to find your page
+
+<!--
+<a href= "/" style="text-decoration: none;">GO HOME&nbsp;</a> or <font color=#42bff7>SEARCH</font> here to find your page
+-->
+
+{% if site.search == true %}
+		<!--
+        <button class="search__togglesss" type="button">
+          <span class="visually-hidden">{{ site.data.ui-text[site.locale].search_label | default: "Toggle search" }}</span>
+          <svg class="icon" width="16" height="16" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 15.99 16">
+            <path d="M15.5,13.12L13.19,10.8a1.69,1.69,0,0,0-1.28-.55l-0.06-.06A6.5,6.5,0,0,0,5.77,0,6.5,6.5,0,0,0,2.46,11.59a6.47,6.47,0,0,0,7.74.26l0.05,0.05a1.65,1.65,0,0,0,.5,1.24l2.38,2.38A1.68,1.68,0,0,0,15.5,13.12ZM6.4,2A4.41,4.41,0,1,1,2,6.4,4.43,4.43,0,0,1,6.4,2Z" transform="translate(-.01)"></path>
+          </svg>
+        </button>
+		-->
+		<div class="search-content is--visible">
+          <div class="search-content__inner-wrap__404">
+			<form class="search-content__form__404" onkeydown="return event.key != 'Enter';">
+                <label class="sr-only" for="search">
+                      Enter your search term...
+                </label>
+                <input type="search" id="search" class="search-input__404" tabindex="-1" placeholder="Enter your search term...">
+            </form>
+            <div id="results" class="results"></div></div>
+
+      </div>
+        {% endif %}
+		
+		
+<!--
+<a href= "https://203.0.113.0:4000/> GO HOME </a>
+-->

@@ -1,0 +1,78 @@
+---
+---
+<!doctype html>
+<html lang="{{ site.locale | slice: 0,2 | default: "en" }}" class="no-js">
+  <head>
+	{% include head.html %}
+    {% include head/custom.html %}
+	
+    <!--폰트 from 구글폰트 : Noto Serif KR, (한글미지원) Cabin, Zilla Slab, Josefin Slab, Covered By Your Grace, Damion, Bubbler One-->
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Bubbler+One&family=Cabin:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Covered+By+Your+Grace&family=Damion&family=Josefin+Slab:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&family=Noto+Sans+KR:wght@300;400;500;700&family=Zilla+Slab:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+	<!--폰트 from 눈누 : 이롭게 바탕체 -->
+	<link rel="preload" as="style" href="https://cdn.jsdelivr.net/font-iropke-batang/1.2/font-iropke-batang.css">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/font-iropke-batang/1.2/font-iropke-batang.css">
+	
+  </head>
+
+  <body> 
+    {% include_cached skip-links.html %}
+    {% include_cached browser-upgrade.html %}
+    {% capture logo_path %}{{ site.logo }}{% endcapture %}
+
+    <div class="masthead">
+      <div class="masthead__inner-wrap">
+        <div class="masthead__menu">
+          <nav id="site-nav" class="greedy-nav">
+            {% unless logo_path == empty %}
+              <a class="site-logo" href="{{ '/' | relative_url }}"><img src="{{ logo_path | relative_url }}" alt="{{ site.masthead_title | default: site.title }}"></a>
+            {% endunless %}
+            <a class="site-title" href="{{ '/' | relative_url }}">
+              {{ site.masthead_title | default: site.title }}
+              {% if site.subtitle %}<span class="site-subtitle">{{ site.subtitle }}</span>{% endif %}
+            </a>
+            <ul class="visible-links">
+              {%- for link in site.data.navigation.main -%}
+                <li class="masthead__menu-item">
+                  <a href="{{ link.url | relative_url }}"{% if link.description %} title="{{ link.description }}"{% endif %}>{{ link.title }}</a>
+                </li>
+              {%- endfor -%}
+            </ul>
+           
+           
+      </nav>
+    </div>
+  </div>
+</div>
+
+	
+	
+	{% if page.header.overlay_color or page.header.overlay_image or page.header.image %}
+      {% include page__hero.html %}
+    {% elsif page.header.video.id and page.header.video.provider %}
+      {% include page__hero_video.html %}
+    {% endif %}
+
+    {% if page.url != "/" and site.breadcrumbs %}
+      {% unless paginator %}
+        {% include breadcrumbs.html %}
+      {% endunless %}
+    {% endif %}
+	
+	<div id="main" role="main">
+      {% include sidebar.html %}
+
+      <div class="archive">
+        {% unless page.header.overlay_color or page.header.overlay_image %}
+          <h1 id="page-title" class="page__title">{{ page.title }}</h1>
+        {% endunless %}
+        {{ content }}
+      </div>
+    </div>
+	
+    
+   
+    {% include scripts.html %}
+
+  </body>
+</html>
