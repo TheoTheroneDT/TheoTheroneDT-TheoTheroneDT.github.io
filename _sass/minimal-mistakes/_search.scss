@@ -60,7 +60,7 @@
     margin-left: auto;
     margin-right: auto;
     padding-left: 1em;
-	  &__404 {
+	  &.is--404 {
 	    padding-left: 0em;
 		}
     padding-right: 1em;
@@ -80,7 +80,7 @@
   &__form {
     background-color: transparent;
 	  
-	  &__404 {
+	  &.is--404 {
 	    background-color: #C9ECFC;
 		}
   }
@@ -94,7 +94,7 @@
     box-shadow: none;
     background-color: transparent;
     font-size: $type-size-3;
-	  &__404 {
+	  &.is--404 {
 	    display: block;
 		margin-bottom: 0;
 		padding: 0;
