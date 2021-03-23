@@ -30,9 +30,9 @@ masthead_title           : "D.T.😉" # overrides the website title displayed in
 breadcrumbs              : false # true, false (default)
 words_per_minute         : 200
 
-comment-post: "https://docs.google.com/forms/d/e/1FAIpQLSeHaFZSLKDcOUpyEmVcP9Nj1QrWLJQOW8JFtLIcghyVxZRwIA"
-comment-read: "https://docs.google.com/spreadsheets/d/e/2PACX-1vT2QGOVRje1xO_JcUt5pr0DUhnv7I-G-08q6BrNSyaf_OUqrMjZAO6W-F1GkYfiWvfDnxyXQyBAzrVV/pub?output=csv"
-coment-post-fields: [entry.1348434360, entry.1341424562, entry.910574530]
+comment-post: https://docs.google.com/forms/d/e/1FAIpQLSexTkXO0wl76OZals97jqhdX2E4Vsjqkj_U3nDK5wVb4Uvaew
+comment-read: https://docs.google.com/spreadsheets/d/1I9dKDkoKykwXPPea1D8-NaHpu_KU_Gg-xtJaMy-ER3o
+coment-post-fields: [entry.104417750, entry.1820440944, entry.1316990367]
 
 comments:
   provider               : # false (default), "disqus", "discourse", "facebook", "staticman", "staticman_v2", "utterances", "custom"
